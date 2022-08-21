@@ -1,0 +1,9 @@
+.NartyListHeader {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-temple-rows: minmax(100px, auto);
+
+    border: 2px solid var(--border-color);
+    padding: 10px;
+}
