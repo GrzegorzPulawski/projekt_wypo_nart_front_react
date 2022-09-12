@@ -12,12 +12,18 @@ const AppHeader = () => {
                 <Link to={"/"}>
                     <div>Home</div>
                 </Link>
-                 <div>Formularz klienta</div>
-                 <div>Wypożycz</div>
+                <Link to={"/form"}>
+                    <div>Formularz klienta</div>
+                </Link>
+                <Link to={"/rent"}>
+                    <div>Wypożycz</div>
+                 </Link>
                 <Link to={"/list"}>
                     <div>NartyListuj</div>
                 </Link>
+                <Link to={"/butyList"}>
                 <div>ButyListuj</div>
+                </Link>
         </div>
     </div>
     );
