@@ -2,6 +2,7 @@ import classes from "./NartyList.module.css";
 import React, {useEffect, useState} from "react";
 import {Grid} from "@mui/material";
 import axios from "../../axios/axios";
+import {Link} from "react-router-dom";
 
 
 const NartyList = () => {
@@ -27,6 +28,11 @@ const NartyList = () => {
                 <div className="three">Nazwa</div>
                 <div className="four">NARTY/SNOWBOARD</div>
                 <div className="five"></div>
+            </div>
+            <div className={classes.DodajNarty}>
+                <Link to={"/formNarty"}>
+                    <div>Dodaj do listy</div>
+                </Link>
             </div>
             {
                 nazwaZmiennej.map(value => {

@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import axios from "../../axios/axios";
 import classes from "./ButyList.module.css";
 import {Grid} from "@mui/material";
+import {Link} from "react-router-dom";
 
 function ButyList() {
     //Deklaracja zmiennej
@@ -25,6 +26,11 @@ function ButyList() {
                 <div>Nazwa butów</div>
                 <div>Rozmiar</div>
                 <div>NARTY/SNOWBOARD</div>
+            </div>
+            <div className={classes.DodajButy}>
+                <Link to={"/form"}>
+                    <div>Dodaj do listy</div>
+                </Link>
             </div>
             {
                 butyListuj.map(value => {

@@ -1,15 +1,17 @@
-.ButyTableHeader  {
+.TableHeader  {
     display: grid;
-    grid-template-columns: 100px 1fr 100px 400px 1fr;
+    grid-template-columns: 130px 1fr 600px
+;
     grid-gap: 90px;
     grid-temple-rows: minmax(100px, auto);
     font-weight: bolder;
     border: 2px solid var(--border-color);
     padding: 4px 0 4px 0;
+
 }
 
 
-.ButyTableRow  div {
+.TableRow  div {
     border: 1px solid var(--border-color);
     padding: 4px 0 4px 0;
     display: flex;
@@ -18,14 +20,5 @@
     align-items: center;
 }
 
-.TableRow div button {
-    width: 90%;
-}
-.DodajButy {
-    background-color: lightgray;
-    width: fit-content;
-    padding: 1px 10px 1px 10px;
-    margin-left: 100px;
-    font-size: x-large;
 
-}
+

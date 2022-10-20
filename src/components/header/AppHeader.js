@@ -3,29 +3,33 @@ import classes from "./AppHeader.module.css";
 import {Link} from "react-router-dom";
 
 const AppHeader = () => {
-    return(
+    return (
         <div className={classes.AppHeader}>
             <div className={classes.HeaderLeft}>
-            <p>Mała Wypożyczalnia Nart</p>
-        </div>
+                <p>Mała Wypożyczalnia Nart</p>
+            </div>
             <div className={classes.HeaderRight}>
                 <Link to={"/"}>
                     <div>Home</div>
                 </Link>
-                <Link to={"/form"}>
+                <Link to={"/formKlient"}>
                     <div>Formularz klienta</div>
                 </Link>
                 <Link to={"/rent"}>
                     <div>Wypożycz</div>
-                 </Link>
+                </Link>
                 <Link to={"/list"}>
-                    <div>NartyListuj</div>
+                    <div>Narty Listuj</div>
                 </Link>
                 <Link to={"/butyList"}>
-                <div>ButyListuj</div>
+                    <div>Buty Listuj</div>
                 </Link>
+                <Link to={"/zestaw-form"}>
+                    <div>Formularz zestawu</div>
+                </Link>
+
+            </div>
         </div>
-    </div>
     );
 
 }

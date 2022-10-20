@@ -23,3 +23,12 @@
     color: lightgoldenrodyellow;
 
 }
+.ListujKomplet{
+    background-color: lightgray;
+    border-style: wave;
+    height: 70%;
+    width: fit-content;
+    margin-left: 150px;
+    font-size: x-large;
+
+}

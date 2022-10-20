@@ -1,25 +1,15 @@
-.Form{
+.FormNarty{
     background-color: var(--body);
     width: calc(91vw - 8px);
     min-height: calc(100vh - 78px);
     margin: 9px auto auto;
-
-}
-
-.FormRow{
-    background-color: lightgray;
-    border-style: groove;
     font-size: large;
-    margin: auto 100px auto 100px ;
-    padding: 20px;
-
-
 }
-.FormConfirm{
+
+.Confirm{
     background: lightgray;
     border-style: solid;
-    margin: 50px 200px;
+    margin-left: 400px;
+    margin-top: 50px;
     font-size: x-large;
-    color: lightgoldenrodyellow;
-
 }

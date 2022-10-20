@@ -7,8 +7,6 @@
     border: 2px solid var(--border-color);
     padding: 4px 0 4px 0;
 
-
-
 }
 
 
@@ -23,4 +21,13 @@
 
 .TableRow div button {
     width: 90%;
+}
+.DodajNarty{
+    background-color: lightgray;
+    border-style: wave;
+    height: 70%;
+    width: fit-content;
+    margin-left: 150px;
+    font-size: x-large;
+
 }

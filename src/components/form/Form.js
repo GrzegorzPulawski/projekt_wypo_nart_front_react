@@ -1,11 +1,55 @@
 import React from "react";
 import classes from "./Form.module.css";
+import axios from "../../axios/axios";
 
 function Form() {
-    return(
+    const submit = () => {
+        let nazwa = document.getElementById('input-nazwa').value;
+        let rozmiar = document.getElementById('input-rozmiar').value;
+        let rodzaj = document.getElementById('input-rodzaj').value;
+
+        console.log(nazwa + " " + rozmiar + " " + rodzaj)
+
+        // JSON który odzwierciedla CreateButyRequest
+        let createButy = {
+            'nazwaButow': nazwa,
+            'rozmiarButow': rozmiar,
+             'rodzajButow': rodzaj
+        }
+
+        axios.post("/api/buty", createButy)
+            .then((response) => {
+                console.log(response)
+            })
+            .catch((error) => {
+                console.log(error)
+            });
+    }
+
+    return (
         <div className={classes.Form}>
-            <h3>Formularz</h3>
+            <div className={"container"}>
+                <div className={classes.FormRow}>
+                    <label className={'form-input-label'}>Nazwa butów:</label>
+                    <input id={'input-nazwa'} placeholder={'Nazwa'} className={'form-input-field'}/>
+                </div>
+                <div className={classes.FormRow}>
+                    <label className={'form-input-label'}>Rozmiar butów:</label>
+                    <input id={'input-rozmiar'} placeholder={'Rozmiar'} className={'form-input-field'}/>
+                </div>
+                <div className={classes.FormRow}>
+                    <label className={'form-input-label'}>Wybierz rodzaj:</label>
+
+                    <select id={'input-rodzaj'} placeholder={'Rodzaj'} className={'form-input-field'}>
+                        <option value={"NARCIARSKIE"}>Narciarskie</option>
+                        <option value={"SNOWBOARDOWE"}>Snowboardowe</option>
+                    </select>
+
+                </div>
+                <button className={classes.FormConfirm} onClick={submit}>Confirm</button>
+            </div>
         </div>
     );
 }
+
 export default Form;
