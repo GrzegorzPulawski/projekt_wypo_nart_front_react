@@ -4,23 +4,24 @@
     width: 90vw;
     margin: auto;
     display: flex;
+    white-space: nowrap;
 }
 .HeaderLeft{
     height: auto;
     width: auto;
+    margin-left: 10px;
 
-    margin-left: 20px;
 
 }
 .HeaderRight{
     margin-left: auto;
     height: auto;
     width: auto;
-    position:page;
+
 
 
 }
-.HeaderRight div{
+.HeaderRight div {
     margin: 15px 30px 20px;
     display:inline-block;
     font-size: large;

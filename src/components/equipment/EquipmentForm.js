@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import classes from "./EquipmentForm.module.css";
 import axios from "../../axios/axios";
 import {Link} from "react-router-dom";
+import {Button, Col, Container, Row} from "react-bootstrap";
+
 
 function EquipmentForm() {
     const [narty, setNarty] = useState([]);
@@ -49,21 +51,21 @@ function EquipmentForm() {
             .catch((error) => {
                 console.log(error)
             });
-
     }
 
     return (
-        <div className={classes.Form}>
-            <div className={"container"}>
-                <div className={classes.FormRow}>
+        <div >
+            <Container className={classes.Form}>
+                <Row>
+                <Col className={classes.FormRow}>
                     <label className={'form-input-label'}>Nazwa kompletu:</label>
                     <input id={'input-nazwa'} placeholder={'Nazwa'} className={'form-input-field'}/>
-                </div>
-                <div className={classes.FormRow}>
+                </Col>
+                <Col className={classes.FormRow}>
                     <label className={'form-input-label'}>Cena doba:</label>
                     <input type={'number'} id={'input-cena-doba'} placeholder={'Cena doba'} className={'form-input-field'}/>
-                </div>
-                <div className={classes.FormRow}>
+                </Col>
+                <Col className={classes.FormRow}>
                     <label className={'form-input-label'}>Wybierz narty:</label>
                     <select id={'input-narty'} placeholder={'Narty'} className={'form-input-field'}>
                         {
@@ -72,9 +74,8 @@ function EquipmentForm() {
                              })
                         }
                     </select>
-                </div>
-
-                <div className={classes.FormRow}>
+                </Col>
+                <Col className={classes.FormRow}>
                     <label className={'form-input-label'}>Wybierz buty:</label>
                     <select id={'input-buty'} placeholder={'Buty'} className={'form-input-field'}>
                         {
@@ -83,17 +84,20 @@ function EquipmentForm() {
                             })
                         }
                     </select>
-                </div>
-                <button className={classes.FormConfirm} onClick={submit}>Confirm</button>
-            </div>
-            <div className={classes.ListujKomplet}>
+                </Col>
+                </Row>
+             <Row>
+            <Col className={classes.Button}>
+                <Button variant={"light"} onClick={submit}>Zatwierdź zmiany</Button>
+            </Col>
+            <Col className={classes.Button}>
                 <Link to={"/kompletList"}>
-                    <div>Listuj komplety</div>
+                    <Button variant={"light"}>Listuj komplety</Button>
                 </Link>
-            </div>
+            </Col>
+             </Row>
+            </Container>
         </div>
-
     );
 }
-
 export default EquipmentForm;

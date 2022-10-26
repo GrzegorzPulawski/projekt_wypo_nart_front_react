@@ -21,25 +21,23 @@ const KompletList = () => {
     }, []);
 
     return(
-        <div className={classes.Komplet}>
-            <div  className={classes.TableHeader}>
-                <div className="one">Id</div>
-                <div className="two">Nazwa kompletu</div>
-                <div className="three">Cena doba</div>
-            </div>
+        <div>
+        <Grid container className={classes.TableHeader}>
+                <Grid item xs={1}>Id</Grid>
+                <Grid item xs={3}>Nazwa kompletu</Grid>
+                <Grid item xs={2}>Cena doba w zł</Grid>
+            </Grid>
 
             {
                 nazwaZmiennej.map(value => {
                     return (<Grid container className={classes.TableRow}>
-                        <Grid item xs={2}>{value.idKomplet}</Grid>
-                        <Grid item xs={2}>{value.nazwaKomplet}</Grid>
-                        <Grid item xs={6}>{value.cenaDoba}</Grid>
+                        <Grid item xs={1}>{value.idKomplet}</Grid>
+                        <Grid item xs={3}>{value.nazwaKomplet}</Grid>
+                        <Grid item xs={2}>{value.cenaDoba}</Grid>
                     </Grid>)
                 })
             }
-
         </div>
-
     );
 }
 export default KompletList;

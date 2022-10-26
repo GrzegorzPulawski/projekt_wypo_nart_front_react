@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Col, Container, Row} from "react-bootstrap";
+import {Col, Container, Row,} from "react-bootstrap";
 import axios from "../../axios/axios";
 import classes from "./KlientList.module.css";
 import {Grid} from "@mui/material";
@@ -7,43 +7,45 @@ import {Grid} from "@mui/material";
 const KlientList = () => {
     const [klientList, setterKlientList] = useState([]);
 
-    useEffect(() =>{
+    useEffect(() => {
         axios.get("/api/klient")
-            .then((response)=>{
+            .then((response) => {
                 console.log(response);
                 setterKlientList(response.data)
             })
-            .catch((error)=>{
+            .catch((error) => {
                 console.log(error);
             });
-    },[]);
-    return(
+    }, []);
+    return (
         <div>
-            <Container className={classes.FormRow}>
-            <div>Id</div>
-            <div>Nazwisko</div>
-            <div>Imię</div>
-            <div>Numer dowodu</div>
-            <div>Numer telefonu</div>
+            <Container className={classes.TableHeader}>
+                <Row>
+                     <Col xs={1}>Id</Col>
+                     <Col xs={2}>Nazwisko</Col>
+                     <Col xs={2}>Imię</Col>
+                     <Col xs={2}>Numer dowodu</Col>
+                     <Col xs={2}>Numer telefonu</Col>
+                </Row>
             </Container>
 
-        {
-         klientList.map(value => {
-             return(
+            {
+                klientList.map(value => {
+                        return (
 
-                <Container className={classes.FormRow}>
-                <row>
-                    <Col md={3}>{value.idKlient}</Col>
-                    <Col md={3}>{value.nazwisko}</Col>
-                    <Col md={3}>{value.imie}</Col>
-                    <Col md={3}>{value.nrDowodu}</Col>
-                    <Col md={3}>{value.nrTelefonu}</Col>
-                </row>
-                </Container>
-
-            )
-             })
-         }
+                            <Container className={classes.TableRow}>
+                                <Row>
+                                    <Col xs={1}>{value.idKlient}</Col>
+                                    <Col xs={2}>{value.nazwisko}</Col>
+                                    <Col xs={2}>{value.imie}</Col>
+                                    <Col xs={2}>{value.nrDowodu}</Col>
+                                    <Col xs={2}>{value.nrTelefonu}</Col>
+                                </Row>
+                            </Container>
+                        )
+                    }
+                )
+            }
         </div>
     );
 }

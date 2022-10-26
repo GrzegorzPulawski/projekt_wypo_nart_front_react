@@ -2,6 +2,6 @@
     background-color: var(--body);
     width: calc(91vw - 8px);
     min-height: calc(100vh - 78px);
-    margin: 9px auto auto;
+    margin: 30px auto auto;
 
 }

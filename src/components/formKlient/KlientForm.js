@@ -2,10 +2,9 @@ import React from "react";
 import axios from "../../axios/axios";
 import classes from "./KlientForm.module.css";
 import {Link} from "react-router-dom";
+import {Button, Col, Container, Row} from "react-bootstrap";
 
 function KlientForm () {
-
-
     const submit = () => {
         let nazwisko = document.getElementById('input-nazwisko').value;
         let imie = document.getElementById('input-imie').value;
@@ -30,23 +29,37 @@ function KlientForm () {
             });
     }
     return (
-        <div className={classes.KlientForm}>
-            <div className={"container"}>
-                <label>Nazwisko</label>
-                <input id={'input-nazwisko'}/>
-                <label>Imię</label>
-                <input id={'input-imie'}/>
-                <label>Numer dowodu</label>
-                <input id={'input-nrDowodu'}/>
-                <label>Numer telefonu</label>
-                <input id={'input-nrTelefonu'}/>
-
-            </div>
-            <button className={classes.FormConfirm} onClick={submit}>Zatwierdź</button>
-        <div/>
+        <div >
+            <Container className={classes.Form} >
+            <Row>
+            <Col>
+                <label>Nazwisko:</label>
+                <input id={'input-nazwisko'} placeholder={'Nazwisko'}/>
+            </Col>
+            <Col>
+                <label>Imię:</label>
+                <input id={'input-imie'} placeholder={'Imię'}/>
+            </Col>
+            <Col>
+                <label>Nr dowodu:</label>
+                <input id={'input-nrDowodu'} placeholder={'podaj'} size={8}/>
+            </Col>
+            <Col>
+                <label>Nr telefonu:</label>
+                <input type={'number'} id={'input-nrTelefonu'} placeholder={'Nr telefonu'} size={10}/>
+            </Col>
+            </Row>
+            <Row>
+            <Col className={classes.Button} >
+            <Button variant={"light"} onClick={submit}>Zatwierdź zmiany</Button>
+            </Col>
+            <Col className={classes.Button}>
             <Link to={"/klient-list"}>
-                <div>Lista Klientów</div>
+                <Button variant={"light"} >Lista Klientów</Button>
             </Link>
+            </Col>
+            </Row>
+            </Container>
         </div>
     );
 }

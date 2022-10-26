@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Form.module.css";
 import axios from "../../axios/axios";
+import {Button, Col, Container, Row} from "react-bootstrap";
 
 function Form() {
     const submit = () => {
@@ -27,27 +28,30 @@ function Form() {
     }
 
     return (
-        <div className={classes.Form}>
-            <div className={"container"}>
-                <div className={classes.FormRow}>
-                    <label className={'form-input-label'}>Nazwa butów:</label>
-                    <input id={'input-nazwa'} placeholder={'Nazwa'} className={'form-input-field'}/>
-                </div>
-                <div className={classes.FormRow}>
+        <div >
+            <Container className={classes.Form}>
+            <Row>
+            <Col>
+                <labelabel className={'form-input-label'}>Nazwa butów:</labelabel>
+                <input id={"input-nazwa"} placeholder={'Nazwa'} className={'form-input-field'}/>
+            </Col>
+            <Col>
                     <label className={'form-input-label'}>Rozmiar butów:</label>
-                    <input id={'input-rozmiar'} placeholder={'Rozmiar'} className={'form-input-field'}/>
-                </div>
-                <div className={classes.FormRow}>
+                    <input type={'number'} id={'input-rozmiar'} placeholder={'Rozmiar'} className={'form-input-field'}/>
+            </Col>
+            <Col>
                     <label className={'form-input-label'}>Wybierz rodzaj:</label>
-
                     <select id={'input-rodzaj'} placeholder={'Rodzaj'} className={'form-input-field'}>
                         <option value={"NARCIARSKIE"}>Narciarskie</option>
                         <option value={"SNOWBOARDOWE"}>Snowboardowe</option>
                     </select>
+                </Col>
+            </Row>
 
-                </div>
-                <button className={classes.FormConfirm} onClick={submit}>Confirm</button>
-            </div>
+            <Row className={classes.Button}>
+                <Button variant={"light"} onClick={submit}>Zatwierdź zmiany</Button>
+            </Row>
+            </Container>
         </div>
     );
 }

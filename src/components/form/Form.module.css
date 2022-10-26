@@ -1,25 +1,11 @@
-.Form{
-    background-color: var(--body);
-    width: calc(91vw - 8px);
-    min-height: calc(100vh - 78px);
-    margin: 9px auto auto;
-
+.Form  div {
+    border: 1px solid var(--border-color);
+    padding: 20px 20px 20px 20px;
+    background: var(--nawigacja);
+    color: ghostwhite;
+    display: flex;
+    justify-content: center;
 }
-
-.FormRow{
-    background-color: lightgray;
-    border-style: groove;
-    font-size: large;
-    margin: auto 100px auto 100px ;
-    padding: 20px;
-
-
-}
-.FormConfirm{
-    background: lightgray;
-    border-style: solid;
-    margin: 50px 200px;
-    font-size: x-large;
-    color: lightgoldenrodyellow;
-
+.Button{
+    margin: 6px 200px 0px 200px;
 }

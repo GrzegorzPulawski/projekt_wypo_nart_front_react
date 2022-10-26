@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from "../../axios/axios";
 import classes from "./FormNarty.module.css";
+import {Button, Col, Container, Row} from "react-bootstrap";
 
 function FormNarty() {
     const submitNarty = () => {
@@ -24,22 +25,31 @@ function FormNarty() {
             });
     }
     return (
-        <div className={classes.FormNarty}>
-            <div className={"container"}>
-                <label>Nazwa Nart</label>
-                <input id={'input-nazwa'}/>
-                <label>Długość nart</label>
-                <input id={'input-dlugosc'}/>
-                <label>Wybierz rodzaj</label>
+        <div >
+            <Container className={classes.Form}>
+             <Row>
+            <Col>
+                <label>Nazwa Nart: </label>
+                <input id={'input-nazwa'} placeholder={'Nazwa nart'}/>
+            </Col>
+            <Col>
+                <label>Długość nart: </label>
+                <input type={'number'} id={'input-dlugosc'} placeholder={'Długość nart'}/>
+            </Col>
+            <Col>
+                <label>Wybierz rodzaj:</label>
                 <select id={'input-rodzaj'}>
                     <option value={'NARTY'}>Narty</option>
                     <option value={"SNOWBOARD"}>Snowboard</option>
                 </select>
-            </div>
-            <button className={classes.Confirm} onClick={submitNarty}>Zatwierdź</button>
+            </Col>
+             </Row>
+
+            <Row className={classes.Button}>
+            <Button variant={'light'} onClick={submitNarty}>Zatwierdź zmiany</Button>
+           </Row>
+           </Container>
         </div>
     );
-
 }
-
 export default FormNarty;

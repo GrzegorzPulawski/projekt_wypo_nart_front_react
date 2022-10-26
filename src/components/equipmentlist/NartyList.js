@@ -3,6 +3,7 @@ import React, {useEffect, useState} from "react";
 import {Grid} from "@mui/material";
 import axios from "../../axios/axios";
 import {Link} from "react-router-dom";
+import {Button} from "react-bootstrap";
 
 
 const NartyList = () => {
@@ -21,27 +22,25 @@ const NartyList = () => {
     }, []);
 
     return(
-        <div className={classes.Narty}>
-            <div  className={classes.NartyTableHeader}>
-                <div className="one">Id</div>
-                <div className="two">Długość nart</div>
-                <div className="three">Nazwa</div>
-                <div className="four">NARTY/SNOWBOARD</div>
-                <div className="five"></div>
-            </div>
-            <div className={classes.DodajNarty}>
+        <div>
+            <Grid container  className={classes.NartyTableHeader}>
+                <Grid item xs={1}>Id</Grid>
+                <Grid item xs={2}>Długość nart</Grid>
+                <Grid item xs={2}>Nazwa</Grid>
+                <Grid item xs={3}>NARTY/SNOWBOARD</Grid>
+            </Grid>
+            <div className={classes.Button}>
                 <Link to={"/formNarty"}>
-                    <div>Dodaj do listy</div>
+                    <Button variant="light" type="submit">Dodaj do listy</Button>
                 </Link>
             </div>
             {
                 nazwaZmiennej.map(value => {
                     return (<Grid container className={classes.NartyTableRow}>
-                        <Grid item xs={2}>{value.idNart}</Grid>
+                        <Grid item xs={1}>{value.idNart}</Grid>
                         <Grid item xs={2}>{value.dlugoscNart}</Grid>
                         <Grid item xs={2}>{value.nazwaNart}</Grid>
-                        <Grid item xs={2}>{value.rodzajNart}</Grid>
-                        <Grid item xs={2}></Grid>
+                        <Grid item xs={3}>{value.rodzajNart}</Grid>
                     </Grid>)
                 })
             }

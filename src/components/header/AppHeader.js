@@ -1,14 +1,17 @@
 import React from "react";
 import classes from "./AppHeader.module.css";
 import {Link} from "react-router-dom";
-
+import { Container} from "react-bootstrap";
 const AppHeader = () => {
     return (
         <div className={classes.AppHeader}>
+
             <div className={classes.HeaderLeft}>
-                <p>Mała Wypożyczalnia Nart</p>
+                <img src={"https://picsum.photos/id/146/100/50"}/>
+                    <div>Mały Wypożycza Narty</div>
             </div>
-            <div className={classes.HeaderRight}>
+
+            <Container className={classes.HeaderRight}>
                 <Link to={"/"}>
                     <div>Home</div>
                 </Link>
@@ -27,8 +30,7 @@ const AppHeader = () => {
                 <Link to={"/zestaw-form"}>
                     <div>Formularz zestawu</div>
                 </Link>
-
-            </div>
+            </Container>
         </div>
     );
 
