@@ -11,6 +11,8 @@ import KompletList from "../equipmentlist/KompletList";
 import KlientList from "../formKlient/KlientList";
 import KlientForm from "../formKlient/KlientForm";
 import Wypozyczenie from "../wypozyczenie/Wypozyczenie";
+import WypozyczenieList from "../wypozyczenie/WypozyczenieList";
+import Zwrot from "../wypozyczenie/Zwrot";
 
 
 const AppBody = () => {
@@ -28,6 +30,8 @@ const AppBody = () => {
                     <Route path={"/zestaw-form"} element={<EquipmentForm/>}></Route>
                     <Route path={"/klient-list"} element={<KlientList/>}></Route>
                     <Route path={"/formKlient"} element={<KlientForm/>}></Route>
+                    <Route path={"/wypozyczenielist"} element={<WypozyczenieList/>}></Route>
+                    <Route path={"/zwrot-wypozyczenia"} element={<Zwrot/>}></Route>
                 </Routes>
                 </div>
 

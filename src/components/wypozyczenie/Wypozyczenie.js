@@ -2,6 +2,7 @@ import React from "react";
 import axios from "../../axios/axios";
 import classes from "../wypozyczenie/Wypozyczenie.module.css";
 import {Button, Col, Container, Row} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 function Wypozyczenie() {
     const submit = () => {
@@ -41,10 +42,21 @@ function Wypozyczenie() {
                    <input type={'number'} id={'input-klient'} placeholder={'Nr Klienta'} className={'form-input-field'}/>
                </Col>
                </Row>
-
-           <Row className={classes.Button}>
+                <Row>
+           <Col className={classes.Button}>
                <Button variant={"light"} onClick={submit}>Zatwierdź zmiany</Button>
-           </Row>
+           </Col>
+               <Col className={classes.Button}>
+                   <Link to={"/wypozyczenielist"}>
+                       <Button variant={"light"}>Listuj wypożyczenia</Button>
+                   </Link>
+               </Col>
+                    <Col className={classes.Button}>
+                        <Link to={"/zwrot-wypozyczenia"}>
+                            <Button variant={"light"}>Zwrot wypożyczenia</Button>
+                        </Link>
+                    </Col>
+                </Row>
            </Container>
        </div>
    );

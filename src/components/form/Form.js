@@ -37,7 +37,7 @@ function Form() {
             </Col>
             <Col>
                     <label className={'form-input-label'}>Rozmiar butów:</label>
-                    <input type={'number'} id={'input-rozmiar'} placeholder={'Rozmiar'} className={'form-input-field'}/>
+                    <input type={'number  '} id={'input-rozmiar'} placeholder={'Rozmiar'} className={'form-input-field'}/>
             </Col>
             <Col>
                     <label className={'form-input-label'}>Wybierz rodzaj:</label>
