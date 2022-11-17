@@ -4,14 +4,14 @@ import {Link} from "react-router-dom";
 import { Container} from "react-bootstrap";
 const AppHeader = () => {
     return (
-        <div className={classes.AppHeader}>
+        <div  className={classes.AppHeader}>
 
-            <div className={classes.HeaderLeft}>
+            <div  className={classes.HeaderLeft}>
                 <img src={"https://picsum.photos/id/146/100/50"}/>
                     <div>Mały Wypożycza Narty</div>
             </div>
 
-            <Container className={classes.HeaderRight}>
+            <Container className={classes.HeaderRight} >
                 <Link to={"/"}>
                     <div>Home</div>
                 </Link>

@@ -1,5 +1,6 @@
 .Glowne{
     margin-block-start: 30px;
-
+    width: calc(51vw - 8px);
+    margin: 0 auto;
     text-align: center;
 }

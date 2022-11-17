@@ -56,6 +56,12 @@ function Wypozyczenie() {
                             <Button variant={"light"}>Zwrot wypożyczenia</Button>
                         </Link>
                     </Col>
+                 <Col className={classes.Button}>
+                   <Link to={"/umowa-wypozyczenia"}>
+                       <Button variant={"light"}>Umowa wypożyczenia</Button>
+                   </Link>
+               </Col>
+
                 </Row>
            </Container>
        </div>

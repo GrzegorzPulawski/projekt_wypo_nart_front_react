@@ -28,7 +28,7 @@ function Zwrot () {
                 <Row>
                     <Col>
                         <label>Nr zdawanego wypożyczenia:</label>
-                        <input id={'input-nrWypozyczenia'} placeholder={'Nr'}/>
+                        <input type="number" id={'input-nrWypozyczenia'} placeholder={'Nr'}/>
                     </Col>
                 </Row>
                 <Row>

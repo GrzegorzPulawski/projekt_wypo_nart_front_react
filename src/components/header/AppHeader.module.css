@@ -10,6 +10,7 @@
     height: auto;
     width: auto;
     margin-left: 10px;
+    font-style: italic;
 
 
 }
@@ -27,4 +28,9 @@
     font-size: large;
     color: azure;
 
+}
+@media print{
+    .noprint{
+        display:none;
+    }
 }

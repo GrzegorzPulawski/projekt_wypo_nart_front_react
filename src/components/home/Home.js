@@ -4,7 +4,7 @@ import {Card} from "react-bootstrap";
 
 function Home() {
     return(
-    <Card className={classes.Glowne}>
+    <Card  className={classes.Glowne}>
         <Card.Img src={"https://picsum.photos/id/1036/1200/800"}/>
     <Card.Body>
         <Card.Title>

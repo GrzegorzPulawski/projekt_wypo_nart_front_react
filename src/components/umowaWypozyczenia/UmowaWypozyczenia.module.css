@@ -1,0 +1,22 @@
+
+.TableRow div {
+
+    margin: 4px 4px 4px 4px;
+    padding: 4px 4px 4px 4px;
+    display: flex;
+    justify-content: center;
+    row-gap: 5px;
+    font-size: medium;
+
+}
+
+.Label{
+    font-size: large;
+    color: lightgoldenrodyellow;
+    margin: 0px 680px 0px 80px;
+
+}
+.FormButtonSubmit{
+    margin-left: 80px
+;
+}

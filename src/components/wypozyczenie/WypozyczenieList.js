@@ -5,8 +5,8 @@ import classes from "./WypozyczenieList.module.css"
 import {Button} from "react-bootstrap";
 import moment from "moment";
 
-
 const WypozyczenieList = () => {
+
     const [listWypozyczenie, setterWypozyczenieList] = useState([]);
 
     useEffect(()=>{
@@ -56,7 +56,7 @@ const WypozyczenieList = () => {
                 })
             }
             <div>
-                <Button  onClick={window.print}>drukuj</Button>
+                <Button onClick={window.print}>drukuj</Button>
             </div>
 
         </div>
