@@ -30,7 +30,7 @@
 
 }
 @media print{
-    .noprint{
+    .AppHeader{
         display:none;
     }
 }

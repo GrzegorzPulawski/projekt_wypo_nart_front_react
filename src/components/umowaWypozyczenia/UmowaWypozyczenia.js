@@ -25,8 +25,9 @@ function UmowaWypozyczenia() {
     }
 
     const changeCount = (event) => {
-        const {data} = event.nativeEvent;
-        setCount(data)
+        const {value} = event.target;
+        console.log(value)
+        setCount(value)
     }
 
     return (<div>
@@ -69,6 +70,9 @@ function UmowaWypozyczenia() {
                     )
                 })
             }
+            <div className={classes.ButtonPrint}>
+            <Button  onClick={window.print}>drukuj</Button>
+        </div>
         </div>
     );
 

@@ -17,6 +17,15 @@
 
 }
 .FormButtonSubmit{
-    margin-left: 80px
-;
+    margin-left: 80px;
+}
+@media print {
+    .FormButtonSubmit{
+        display: none;}
+
+    .ButtonPrint{
+        display: none;}
+
+    .Label{
+        display: none;}
 }
