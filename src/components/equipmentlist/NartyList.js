@@ -25,7 +25,7 @@ const NartyList = () => {
         <div>
             <Grid container  className={classes.NartyTableHeader}>
                 <Grid item xs={1}>Id</Grid>
-                <Grid item xs={2}>Długość nart</Grid>
+                <Grid item xs={2}>Kod kreskowy</Grid>
                 <Grid item xs={2}>Nazwa</Grid>
                 <Grid item xs={3}>NARTY/SNOWBOARD</Grid>
             </Grid>
