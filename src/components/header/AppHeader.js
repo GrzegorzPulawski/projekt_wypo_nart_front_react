@@ -1,29 +1,31 @@
 import React from "react";
 import classes from "./AppHeader.module.css";
-import {Link} from "react-router-dom";
-import { Container, Button, ButtonGroup, Dropdown} from "react-bootstrap";
+import { Container, Button, ButtonGroup, Dropdown, Navbar, Nav} from "react-bootstrap";
 const AppHeader = () => {
     return (
         <div  className={classes.AppHeader}>
 
-            <div  className={classes.HeaderLeft}>
-                <img src={"https://picsum.photos/id/146/110/60"}/>
-                    <h5>Mały Wypożycza Narty</h5>
-            </div>
+            <Navbar fixed="top" expand="md"   bg="light" variant="light">
+                <Container>
+                <Navbar.Brand>
+                        <img
+                            src="/logo-main.png"
+                            width="170"
+                            height="50"
+                            alt="React Bootstrap logo"
+                        />{' '}
+                    Mały Wypożycza Narty
+                </Navbar.Brand>
+                </Container>
+                <Container>
+                    <Navbar.Brand href="/">Home</Navbar.Brand>
+                    <Nav className="me-auto">
+                        <Nav.Link href="/formKlient">Formularz klienta</Nav.Link>
+                        <Nav.Link href="/zestaw-form">Formularz zestawu</Nav.Link>
+                        <Nav.Link href="/rent">Wypożycz</Nav.Link>
+                    </Nav>
+                </Container>
 
-            <Container className={classes.HeaderRight} >
-                <Link to={"/"}>
-                    <div>Home</div>
-                </Link>
-                <Link to={"/formKlient"}>
-                    <div>Formularz klienta</div>
-                </Link>
-                <Link to={"/zestaw-form"}>
-                    <div>Formularz zestawu</div>
-                </Link>
-                <Link to={"/rent"}>
-                    <div>Wypożycz</div>
-                </Link>
                 <Dropdown as={ButtonGroup}>
                     <Button variant="success">Magazyn</Button>
 
@@ -34,7 +36,7 @@ const AppHeader = () => {
                         <Dropdown.Item href="/butyList">Buty listuj</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-            </Container>
+            </Navbar>
         </div>
     );
 
